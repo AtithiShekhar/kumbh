@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anant - Mental Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .button-style {
+        background-color: #256075;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">Anant</div>
+        <nav>
+            <ul>
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('consult')">Consult Expert</a></li>
+                <li><a onclick="showPage('ai')">AI Assistance</a></li>
+                <li><a onclick="showPage('about')">About</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="floating-element floating-element-1"></div>
+                <div class="floating-element floating-element-2"></div>
+                <div class="floating-element floating-element-3"></div>
+                <h1>Welcome to Anant - Your Mental Health Companion</h1>
+                <p>Taking care of your mental health is just as important as taking care of your body. Mental health impacts how you think, feel, and behave, and we at Anant aim to help you maintain a healthy mind. Whether you're feeling overwhelmed, stressed, anxious, or just need someone to talk to, we’re here to help you regain balance.</p>
+            </div>
+            <div class="sliding-bar">
+                <div class="slides">
+                    <div class="slide">
+                        <p>Our mission is simple: to make mental health support accessible to everyone. We offer consultations with top experts, AI-driven tools for 24/7 assistance, and valuable resources to help you heal and thrive.</p>
+                    </div>
+                    <div class="slide">
+                        <p>Mental health challenges affect millions around the world. From work stress to personal struggles, it’s important to seek support when you need it. Anant is here for you, offering a safe, confidential environment to explore solutions for your well-being.</p>
+                    </div>
+                    <div class="slide">
+                        <p>Don't let stress control your life. Take charge of your mental well-being with the support of our professionals and the power of AI. At Anant, we make it easy for you to prioritize your mental health, no matter where you are or what you're going through.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>The Importance of Mental Health</h2>
+                <p>Our mental well-being influences every aspect of our lives. It affects how we think, handle stress, and how we interact with the world. With the growing awareness about mental health issues, more people are seeking help. It's essential to understand that mental health challenges are common, and reaching out for help is a brave and necessary step toward healing.</p>
+                <p>Ignoring mental health can lead to serious consequences like depression, anxiety, or even physical health problems. It’s vital to recognize when something feels off and to take proactive measures to address it before it spirals further.</p>
+                <p>At Anant, we offer a holistic approach to mental wellness by combining professional help, AI-powered tools, and a vast library of resources to support you at every stage of your mental health journey. Our goal is to create a compassionate space where everyone can access the resources they need to thrive.</p>
+                <h2>How We Help</h2>
+                <p>We understand that no two individuals are the same, and neither are their mental health needs. That’s why we offer a wide range of services, from one-on-one expert consultations to personalized AI-driven support tools, to help you manage your mental health effectively.</p>
+                <ul>
+                    <li><strong>Expert Consultations:</strong> Our team of licensed psychologists and therapists are ready to guide you through your struggles. Whether you’re dealing with stress, anxiety, or trauma, we have experts specializing in various areas of mental health.</li>
+                    <li><strong>AI Mental Health Assistant:</strong> 24/7 support whenever you need it. Our AI assistant helps you manage emotional distress, anxiety, and even offers cognitive-behavioral techniques to help you cope with overwhelming feelings.</li>
+                    <li><strong>Interactive Mental Health Resources:</strong> Access articles, videos, podcasts, and downloadable resources that help improve mental well-being. From stress management techniques to mindfulness exercises, we’ve got you covered.</li>
+                    <li><strong>Personalized Support Plans:</strong> We believe in individualized care. Once you start your journey with Anant, you’ll receive a personalized mental health support plan based on your specific needs and concerns. Whether it's self-help exercises or regular check-ins with a therapist, we'll be there with you every step of the way.</li>
+                </ul>
+                <div class="cta-buttons">
+                    <button onclick="showPage('consult')">Book a Consultation</button>
+                    <button onclick="showPage('ai')">Access AI Support</button>
+                </div>
+            </div>
+            <div class="testimonials">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial">
+                        <p>"I’ve never felt more supported in my life. Anant's AI chatbot has been a great tool in helping me manage my anxiety. The expert consultations have provided me with invaluable coping strategies, and I finally feel like I’m in control of my mental health again."</p>
+                        <h4>- Priya Verma</h4>
+                    </div>
+                   
+                 
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial">
+                        <p>"Anant is a game-changer for mental health. The team is incredibly understanding and kind, and the AI is surprisingly accurate and helpful. I’m now able to handle tough situations much better and live a more balanced life."</p>
+                        <h4>- Aman Sharma</h4>
+                    </div>
+                   
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial">
+                        <p>"The resources Anant provides are exceptional. From articles to self-help guides, I’ve learned how to better manage my stress. The mental health plan they designed for me has made a huge difference in my life. Highly recommend to anyone who’s struggling!"</p>
+                        <h4>- Alex Gupta</h4>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="resources">
+                <h2>Resource Library</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <h3>Guided Meditation for Stress Relief</h3>
+                        <p>Meditation can be an excellent way to calm your mind and reduce stress. Download our free guided meditation audio, which helps you relax and focus. It’s a simple yet powerful tool to help you find calm in the chaos.</p>
+                        <button>Download</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Effective Stress Management Techniques</h3>
+                        <p>Stress is a part of life, but managing it is essential. This guide provides you with practical techniques and exercises, from deep breathing to time management strategies, to help you stay in control.</p>
+                        <button>Download</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Self-Care Checklist</h3>
+                        <p>Self-care is essential to maintaining mental well-being. Our self-care checklist helps you track small, positive actions that contribute to a healthier mind. Take 5 minutes a day to check in with yourself!</p>
+                        <button>Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consult" class="section">
+            <h2>Consult with Our Experts</h2>
+            <p>Our expert team is here to help you through the challenges you are facing. Whether it’s work-related stress, family issues, or mental health concerns, our professionals are available for one-on-one consultations. Our therapists and counselors specialize in cognitive behavioral therapy, relationship counseling, and much more.</p>
+            <p>It’s important to talk about your feelings with a trusted professional. With Anant, you can book a consultation at your convenience and receive support from the comfort of your own home.</p>
+            <div class="experts">
+                <div class="expert-card">
+                    <img src="atithipic1.jpeg.jpg" alt="Expert Image">
+                    <h3>Dr. Atithi Shekhar</h3>
+                    <p>Ph.D. in Psychology</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Cognitive Behavioral Therapy, Anxiety Management, Stress Relief</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="naresh.jpeg" alt="Expert Image">
+                    <h3>Dr. Naresh Kushwaha</h3>
+                    <p>Masters in Clinical Psychology</p>
+                    <p>Languages: English, Tamil, Telugu</p>
+                    <p>Specialties: Relationship Therapy, Depression Treatment, Family Therapy</p>
+                    <a href="index3.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="maasi.jpg" alt="Expert Image">
+                    <h3>Dr. Seema pandey</h3>
+                    <p>Clinical Psychologist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Anxiety Management, Self-esteem Counseling, Mindfulness-Based Therapy</p>
+                    <a href="index4.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="asddd.jpg" alt="Expert Image">
+                    <h3>Dr. Pooja Tiwari</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Addiction Recovery, Mental Health Counseling, Cognitive Behavioral Therapy</p>
+                    <a href="index5.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="rza.jpeg" alt="Expert Image">
+                    <h3>Dr. Ubaid Rza</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Anxiety Disorders, Depression Treatment, Mental Wellness</p>
+                    <a href="index6.html" class="button-style">Book Appointment</a>
+                </div>
+               
+                <div class="expert-card">
+                    <img src="rahul.jpeg" alt="Expert Image">
+                    <h3>Dr. Rahul Kushwaha</h3>
+                    <p>Ph.D. in Psychology</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Cognitive Behavioral Therapy, Anxiety Management, Stress Relief</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+               
+                <div class="expert-card">
+                    <img src="ishika.jpeg" alt="Expert Image">
+                    <h3>Dr. Ishika Deshpande</h3>
+                    <p>Clinical Psychologist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Cognitive Behavioral Therapy, Emotional Regulation, Stress Management</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="sanjay.jpg" alt="Expert Image">
+                    <h3>Dr. Sanjay Yadav</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Therapy for PTSD, Anxiety Relief, Behavioral Therapy</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="khushbu.jpeg" alt="Expert Image">
+                    <h3>Dr. Khushbu Patle</h3>
+                    <p>Clinical Psychologist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Relationship Counseling, Stress Management, Anger Management</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="ajay.jpg" alt="Expert Image">
+                    <h3>Dr. Ajay Sulya</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Depression Therapy, Anxiety Treatment, Mental Health Counseling</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="sakshi.jpg" alt="Expert Image">
+                    <h3>Dr. Sakshi Parikar</h3>
+                    <p>Clinical Psychologist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Trauma Therapy, Cognitive Behavioral Therapy, Emotional Healing</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="disha.jpg" alt="Expert Image">
+                    <h3>Dr. Disha Paple</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Cognitive Therapy, Stress Relief, Anxiety Treatment</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="neelam.jpg" alt="Expert Image">
+                    <h3>Dr. Neelam Tiwari</h3>
+                    <p>Clinical Psychologist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Family Counseling, Mental Health Support, Life Coaching</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                <div class="expert-card">
+                    <img src="janvi.jpg" alt="Expert Image">
+                    <h3>Dr. Janvi Patel</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Depression Treatment, Therapy for Anxiety, Mood Disorder Management</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                
+                <div class="expert-card">
+                    <img src="aditi.jpg" alt="Expert Image">
+                    <h3>Dr. Aditi Mishra</h3>
+                    <p>Psychiatrist</p>
+                    <p>Languages: Hindi, English</p>
+                    <p>Specialties: Bipolar Disorder Treatment, Cognitive Therapy, Stress Relief</p>
+                    <a href="index2.html" class="button-style">Book Appointment</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="ai" class="section">
+            <h2>AI Mental Health Assistance</h2>
+            <p>Our AI-driven chatbot is here to provide real-time assistance whenever you need it. Whether you're feeling anxious, stressed, or just need some advice, our AI assistant is designed to guide you through difficult moments, offering personalized recommendations based on your emotional state.</p>
+            <p>The AI-powered tools can also help you build positive habits, track your progress, and introduce you to techniques such as mindfulness, meditation, and breathing exercises.</p>
+            <div class="chatbot-placeholder">
+                AI Chatbot Integration Placeholder
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Anant</h2>
+            <p>Anant was created with one simple goal: to make mental health support accessible, compassionate, and effective. Whether you're looking for expert consultations, AI assistance, or self-help tools, we offer a range of services to meet your needs. Our team is dedicated to empowering you to take control of your mental well-being, with support that’s always available at the touch of a button.</p>
+            <p>We understand that mental health is a deeply personal journey, and we are committed to providing resources that are respectful, confidential, and tailored to your individual needs. Our platform is a safe space for individuals to seek the help they deserve, free from judgment.</p>
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p>Email: atithishekhar@gmail.com</p>
+                <p>Phone: +91 9696805245</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleFAQ(this)">What services do we provide?</h3>
+                <p>We offer expert consultations, AI-driven mental health support, and self-help resources to guide you in your journey to emotional well-being. Our services are designed to be flexible, confidential, and easily accessible from the comfort of your home.</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

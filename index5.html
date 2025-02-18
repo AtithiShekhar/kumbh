@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Appointment Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen Background */
+        body {
+            background: #f0f5f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Card Box */
+        .box-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 600px;
+        }
+
+        /* 3D Card Style */
+        .expert-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .expert-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Flip effect */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .card-inner.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Card Front */
+        .card-front {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-front img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .card-front h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card-front p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .button-style {
+            background-color: #FF6347;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: transform 0.3s, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .button-style:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Card Back */
+        .card-back p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .upload-label {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .upload-input {
+            display: none;
+        }
+
+        .confirm-btn {
+            margin-top: 20px;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .confirm-btn:hover {
+            background-color: #218838;
+        }
+
+        .preview-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box-container">
+    <div class="expert-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="asddd.jpg" alt="Expert Image" id="expertImage">
+                <h3>Dr. Pooja Tiwari</h3>
+                <p>Psychiatrist</p>
+                <p>Languages: Hindi, English</p>
+                <p>Specialties: Addiction Recovery, Mental Health Counseling, Cognitive Behavioral Therapy</p>
+                <button class="button-style" onclick="flipCard()">Book Appointment</button>
+            </div>
+            <div class="card-back">
+                <h3>Consultancy Details</h3>
+                <p><strong>Consultancy Price:</strong> ₹1500</p>
+                <p><strong>Appointment Time:</strong> Monday to Friday, 10 AM - 4 PM</p>
+                <p><strong>Location:</strong> Online & Offline Consultations Available</p>
+                <label for="image-upload" class="upload-label">Upload Your Image for Better Interaction:</label>
+                <input type="file" id="image-upload" class="upload-input">
+                <img id="preview" class="preview-image" alt="Uploaded Image">
+                <button class="confirm-btn" onclick="confirmAppointment()">Confirm Appointment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function flipCard() {
+    const cardInner = document.querySelector('.card-inner');
+    cardInner.classList.toggle('flipped');
+}
+
+function confirmAppointment() {
+    alert("Your appointment has been confirmed with Dr. Pooja Tiwari!");
+}
+
+document.getElementById('image-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const preview = document.getElementById('preview');
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+</body>
+</html>
