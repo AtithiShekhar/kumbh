@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Animate search input
     const searchInput = document.querySelector('#expertSearch');
     setTimeout(() => {
         searchInput.classList.add('loaded');
     }, 500);
 
-    // Intersection Observer for expert cards
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
@@ -22,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.expert-card').forEach(card => {
         observer.observe(card);
     });
-
-    // Hover effect for cards
     document.querySelectorAll('.expert-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
